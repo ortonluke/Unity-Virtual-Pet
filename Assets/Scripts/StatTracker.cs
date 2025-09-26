@@ -29,7 +29,7 @@ public class StatTracker : MonoBehaviour
     {
         if (oldStat + x >= 1)
         {
-            return 1;
+            return 1;   
         }
         else if (oldStat + x <= 0)
         {
