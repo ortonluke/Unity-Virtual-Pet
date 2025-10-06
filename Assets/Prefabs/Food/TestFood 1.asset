@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f84fbcd3e3c3aa44fbda27ea015b4c3f, type: 3}
   m_Name: TestFood 1
   m_EditorClassIdentifier: 
-  itemName: Test Food
+  itemName: Test Food 2
   icon: {fileID: 0}
-  price: 2
+  price: 5
   type: 2
