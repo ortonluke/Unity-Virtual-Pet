@@ -15,7 +15,7 @@ public enum ItemType
 {
     Weapon,
     Armor,
-    Consumable,
-    
+    Food,
+    Energy
 }
 
