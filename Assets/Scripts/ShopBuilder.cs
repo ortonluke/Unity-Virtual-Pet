@@ -15,7 +15,7 @@ public class ShopBuilder : MonoBehaviour
     float[] xPositions = { -120f, 0f, 120f };
     float[] yPositions = { 175f, 25f, -125f };
 
-    private void Start()
+    void Start()
     {
         database = FindObjectOfType<ItemDatabase>();
         PopulateShop();
@@ -31,7 +31,7 @@ public class ShopBuilder : MonoBehaviour
         shopItems.Clear();
 
         //GET ITEMS FOR THE SHOP
-        shopItems = database.GetShopItems();
+        shopItems = database.shopItems;
 
         //Create UI elements
         int index = 0;

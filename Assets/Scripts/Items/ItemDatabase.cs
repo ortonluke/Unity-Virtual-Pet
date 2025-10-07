@@ -9,24 +9,25 @@ public class ItemDatabase : MonoBehaviour
     public List<ItemData> shopItems;
     public int numberOfShopItems;
 
+    void Start()
+    {
+        MakeShopItems();
+    }
+
     // Utility function: get items by type
     public List<ItemData> GetItemsByType(string type)
     {
         return allItems.FindAll(item => item.typeName == type);
     }
 
-    public List<ItemData> GetShopItems()
+    public void MakeShopItems()
     {
-        List<ItemData> items = new List<ItemData>();
         int count = Mathf.Min(numberOfShopItems, allItems.Count);
 
         for (int i = 0; i < count; i++)
         {
-            items.Add(allItems[i]);
+            shopItems.Add(allItems[i]);
+            Debug.Log("Adding: " + allItems[i]);
         }
-
-        return items;
     }
-
-
 }
