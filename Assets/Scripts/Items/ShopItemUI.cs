@@ -11,6 +11,12 @@ public class ShopItemUI : MonoBehaviour
 
     private ItemData itemData;
 
+    [SerializeField] private GameObject BuyPopupPrefab;
+
+    private static GameObject buyMenu;
+    [SerializeField] private float buyMenuYOffset;
+
+
     public void Setup(ItemData data)
     {
         itemData = data;
@@ -21,6 +27,18 @@ public class ShopItemUI : MonoBehaviour
 
     public void ButtonPressed()
     {
-        Debug.Log("Bought " + itemData.itemName);
+        //Make popup menu show up
+        if (buyMenu == null)
+        {
+            buyMenu = Instantiate(BuyPopupPrefab, transform.parent.parent);
+            buyMenu.GetComponent<BuyPopup>().SetShopItem(this);
+            buyMenu.transform.localPosition = new Vector3(0, buyMenuYOffset, 0);
+        }
     }
+
+    public ItemData GetItemData()
+    {
+        return itemData;
+    }
+
 }

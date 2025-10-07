@@ -6,8 +6,8 @@ public class ShopBuilder : MonoBehaviour
 {
     private ItemDatabase database;
 
-    public GameObject itemButtonPrefab; //Template for UI button
-    public Transform itemListParent; // Panel to set as parent
+    [SerializeField] private GameObject itemButtonPrefab; //Template for UI button
+    [SerializeField] private Transform itemListParent; // Panel to set as parent
 
     [SerializeField] private List<ItemData> shopItems = new List<ItemData>(); //list of only items shown in shop
 
@@ -15,12 +15,14 @@ public class ShopBuilder : MonoBehaviour
     float[] xPositions = { -120f, 0f, 120f };
     float[] yPositions = { 175f, 25f, -125f };
 
+
     void Start()
     {
         database = FindObjectOfType<ItemDatabase>();
         PopulateShop();
     }
 
+    //Just for reference later on how to get items of type ____
     private List<ItemData> GetFoodStock()
     {
         return database.GetItemsByType("Food");
@@ -55,4 +57,6 @@ public class ShopBuilder : MonoBehaviour
             }
         }
     }
+
+    
 }

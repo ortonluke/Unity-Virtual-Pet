@@ -7,6 +7,7 @@ public abstract class ItemData : ScriptableObject
     public string itemName;
     public Sprite icon;
     public int price;
+    public string description;
 
     public abstract string typeName { get; }
 }

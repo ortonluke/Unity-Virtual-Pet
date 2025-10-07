@@ -27,7 +27,6 @@ public class ItemDatabase : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             shopItems.Add(allItems[i]);
-            Debug.Log("Adding: " + allItems[i]);
         }
     }
 }
