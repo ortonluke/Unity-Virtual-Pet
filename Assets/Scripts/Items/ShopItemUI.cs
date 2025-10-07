@@ -19,9 +19,8 @@ public class ShopItemUI : MonoBehaviour
         priceText.text = data.price.ToString() + " Gold";
     }
 
-    public void OnBuyButtonPressed()
+    public void ButtonPressed()
     {
         Debug.Log("Bought " + itemData.itemName);
-        // TODO: Hook this up to your inventory
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShopManager : MonoBehaviour
+public class ShopBuilder : MonoBehaviour
 {
     private ItemDatabase database;
 
@@ -10,8 +10,6 @@ public class ShopManager : MonoBehaviour
     public Transform itemListParent; // Panel to set as parent
 
     [SerializeField] private List<ItemData> shopItems = new List<ItemData>(); //list of only items shown in shop
-
-    [SerializeField] private int numItemsShow; //count of shop items
 
     // Hardcoded coordinates for 3x3 grid
     float[] xPositions = { -120f, 0f, 120f };
@@ -33,7 +31,7 @@ public class ShopManager : MonoBehaviour
         shopItems.Clear();
 
         //GET ITEMS FOR THE SHOP
-        shopItems = GetNumItems(numItemsShow);
+        shopItems = database.GetShopItems();
 
         //Create UI elements
         int index = 0;
@@ -56,19 +54,5 @@ public class ShopManager : MonoBehaviour
                 index++;
             }
         }
-    }
-
-    public List<ItemData> GetNumItems(int countWanted)
-    {
-        List<ItemData> items = new List<ItemData>();
-        int count = Mathf.Min(countWanted, database.allItems.Count);
-
-        for (int i = 0; i < count; i++)
-        {
-            items.Add(database.allItems[i]);
-            Debug.Log("Added to items: " + database.allItems[i].itemName);
-        }
-
-        return items;
     }
 }
