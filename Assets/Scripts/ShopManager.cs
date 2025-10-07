@@ -25,12 +25,14 @@ public class ShopManager : MonoBehaviour
 
     private List<ItemData> GetFoodStock()
     {
-        return database.GetItemsByType(ItemType.Food);
+        return database.GetItemsByType("Food");
     }
 
     void PopulateShop()
     {
         shopItems.Clear();
+
+        //GET ITEMS FOR THE SHOP
         shopItems = GetNumItems(numItemsShow);
 
         //Create UI elements
@@ -40,9 +42,9 @@ public class ShopManager : MonoBehaviour
         {
             for (int col = 0; col < xPositions.Length; col++)
             {
-                if (index >= database.allItems.Count) return;
+                if (index >= shopItems.Count) return;
 
-                ItemData item = database.allItems[index];
+                ItemData item = shopItems[index];
                 GameObject button = Instantiate(itemButtonPrefab, itemListParent);
 
                 // Position relative to parent

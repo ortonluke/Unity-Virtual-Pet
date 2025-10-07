@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f84fbcd3e3c3aa44fbda27ea015b4c3f, type: 3}
-  m_Name: TestFood 1
+  m_Script: {fileID: 11500000, guid: cb043652da00fbb4c8aa3bba06eb859a, type: 3}
+  m_Name: Steak
   m_EditorClassIdentifier: 
-  itemName: Test Food 2
+  itemName: Steak
   icon: {fileID: 0}
-  price: 5
-  type: 2
+  price: 15
+  saturation: 55
