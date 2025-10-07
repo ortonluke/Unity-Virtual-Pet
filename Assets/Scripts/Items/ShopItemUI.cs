@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class ShopItemUI : MonoBehaviour
 {
-    //[SerializeField] private UnityEngine.UI.Image icon;
-    //[SerializeField] private TMP_Text itemNameText;
     [SerializeField] private TMP_Text priceText;
+    [SerializeField] private UnityEngine.UI.Image render;
 
     private ItemData itemData;
 
@@ -16,13 +17,21 @@ public class ShopItemUI : MonoBehaviour
     private static GameObject buyMenu;
     [SerializeField] private float buyMenuYOffset;
 
-
     public void Setup(ItemData data)
     {
         itemData = data;
-        //icon.sprite = data.icon;
-        //itemNameText.text = data.itemName;
-        priceText.text = data.price.ToString() + " Gold";
+        if (data.icon != null)
+        {
+            Debug.Log("I HAVE AN ICON");
+            render.sprite = data.icon;
+        }
+        else
+        {
+            Debug.Log("I DON'T HAVE AN ICON");
+        }
+
+            //itemNameText.text = data.itemName;
+            priceText.text = data.price.ToString() + " Gold";
     }
 
     public void ButtonPressed()

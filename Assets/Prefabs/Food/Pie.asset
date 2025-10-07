@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb043652da00fbb4c8aa3bba06eb859a, type: 3}
   m_Name: Pie
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Pie
   icon: {fileID: 0}
-  price: 0
-  saturation: 0
+  price: 15
+  description: A delicious slice of pastry, sweet and satisfying.
+  saturation: 45

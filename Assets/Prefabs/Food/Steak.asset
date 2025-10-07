@@ -15,4 +15,5 @@ MonoBehaviour:
   itemName: Steak
   icon: {fileID: 0}
   price: 15
+  description: Cooked to medium-rare
   saturation: 55

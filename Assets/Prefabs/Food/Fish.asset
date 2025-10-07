@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb043652da00fbb4c8aa3bba06eb859a, type: 3}
   m_Name: Fish
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Fish
   icon: {fileID: 0}
-  price: 0
-  saturation: 0
+  price: 6
+  description: Fresh from the nearest pond.
+  saturation: 30

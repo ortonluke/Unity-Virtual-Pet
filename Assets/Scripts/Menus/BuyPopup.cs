@@ -10,11 +10,15 @@ public class BuyPopup : MonoBehaviour
     private ItemData itemData;
 
     [SerializeField] private TextMeshProUGUI titleText;
+    [SerializeField] private TextMeshProUGUI descText;
+
     // Start is called before the first frame update
     void Start()
     {
         itemData = shopItem.GetItemData();
+
         titleText.text = itemData.name;
+        descText.text = itemData.description;
     }
 
     // Update is called once per frame

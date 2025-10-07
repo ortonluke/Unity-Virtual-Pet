@@ -1602,8 +1602,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allItems:
-  - {fileID: 11400000, guid: 608dc6d29d5ac9847951611a1b21b57c, type: 2}
-  - {fileID: 11400000, guid: 170c70a74313b8040b2ffcfd0ba1b6e7, type: 2}
+  - {fileID: 11400000, guid: 5097b1659dd65144aba2fda114cb9494, type: 2}
+  - {fileID: 11400000, guid: e427c6e5f79a548418103abf58b91761, type: 2}
+  - {fileID: 11400000, guid: 82fab6773a9f92a41b355407d58a9215, type: 2}
+  - {fileID: 11400000, guid: 9c24404a2cb1c3e49a8722ab38d401e3, type: 2}
+  - {fileID: 11400000, guid: d0dd8cbfb8cd9a44e9c2730d01ea34a3, type: 2}
+  - {fileID: 11400000, guid: 03e3288f538ea61479326bdf6b2bc859, type: 2}
+  - {fileID: 11400000, guid: 893d3ccbb9c98e540b231d38ead7ff12, type: 2}
+  - {fileID: 11400000, guid: d6ab1ec4921f9c84fb784714c5287a21, type: 2}
+  - {fileID: 11400000, guid: 0fb95ab97a1f7774abdf1af06ef53028, type: 2}
+  - {fileID: 11400000, guid: e9fa6a7d8880d6b42a57ad5631a5679e, type: 2}
+  - {fileID: 11400000, guid: 7e4bf684ac297e345bb771bd50e0106c, type: 2}
+  shopItems: []
+  numberOfShopItems: 9
 --- !u!1 &1288272989
 GameObject:
   m_ObjectHideFlags: 0

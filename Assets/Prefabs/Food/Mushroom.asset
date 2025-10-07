@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb043652da00fbb4c8aa3bba06eb859a, type: 3}
   m_Name: Mushroom
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Mushroom
   icon: {fileID: 0}
-  price: 0
-  saturation: 0
+  price: 3
+  description: "Mysterious fungi. Could be delicious\u2026 could be magical."
+  saturation: 12

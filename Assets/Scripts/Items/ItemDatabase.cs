@@ -9,6 +9,7 @@ public class ItemDatabase : MonoBehaviour
     public List<ItemData> shopItems;
     public int numberOfShopItems;
 
+
     void Start()
     {
         MakeShopItems();
