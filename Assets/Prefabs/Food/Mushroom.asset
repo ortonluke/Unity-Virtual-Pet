@@ -16,4 +16,6 @@ MonoBehaviour:
   icon: {fileID: 0}
   price: 3
   description: "Mysterious fungi. Could be delicious\u2026 could be magical."
+  quantity: 0
+  buyMaxNum: 15
   saturation: 12

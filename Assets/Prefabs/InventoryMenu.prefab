@@ -1956,6 +1956,7 @@ GameObject:
   - component: {fileID: 4540285551353938042}
   - component: {fileID: 5580234452273823630}
   - component: {fileID: 7939763825568346382}
+  - component: {fileID: 1715287772924572861}
   m_Layer: 5
   m_Name: InventoryMenu
   m_TagString: Untagged
@@ -2045,3 +2046,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1715287772924572861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8024618715132814423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57610a15a3fce546a578a8f5ee4ead3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryPrefab: {fileID: 2243846429438616302, guid: 6308b2898ad39cc4fb6e2028264ad6b1, type: 3}
+  panel: {fileID: 4540285551353938042}
+  inventoryItems: []

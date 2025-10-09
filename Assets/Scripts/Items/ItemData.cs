@@ -8,6 +8,9 @@ public abstract class ItemData : ScriptableObject
     public Sprite icon;
     public int price;
     public string description;
+    public int quantity;
+
+    public int buyMaxNum;
 
     public abstract string typeName { get; }
 }

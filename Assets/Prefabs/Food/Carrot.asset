@@ -16,4 +16,6 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 8c0a6463b0588cf4c849d7795b571360, type: 3}
   price: 2
   description: The rabbit-approved energy bar. Crunchy enough to hop into adventure.
+  quantity: 0
+  buyMaxNum: 20
   saturation: 10

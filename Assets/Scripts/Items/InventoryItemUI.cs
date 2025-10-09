@@ -2,21 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
+using static Unity.Collections.AllocatorManager;
 
-public class ShopItemUI : MonoBehaviour
+public class InventoryItemUI : MonoBehaviour
 {
-    [SerializeField] private TMP_Text priceText;
+    [SerializeField] private TMP_Text quantityText;
     [SerializeField] private UnityEngine.UI.Image render;
 
     private ItemData itemData;
 
-    [SerializeField] private GameObject BuyPopupPrefab;
-    private static GameObject buyMenu;
-    [SerializeField] private float buyMenuYOffset;
 
-    public int stock;
+    //Popup Prefab for selecting it
 
     public void Setup(ItemData data)
     {
@@ -25,18 +21,14 @@ public class ShopItemUI : MonoBehaviour
         {
             render.sprite = data.icon;
         }
-        else
-        {
-            
-        }
-        priceText.text = data.price.ToString() + " Gold";
 
-        stock = GetStock();
-
+        quantityText.text = itemData.quantity.ToString();
     }
 
     public void ButtonPressed()
     {
+        Debug.Log("Inventory (" + itemData.name + ") pressed!");
+        /*
         //Make popup menu show up
         if (buyMenu == null)
         {
@@ -44,16 +36,6 @@ public class ShopItemUI : MonoBehaviour
             buyMenu.GetComponent<BuyPopup>().SetShopItem(this);
             buyMenu.transform.localPosition = new Vector3(0, buyMenuYOffset, 0);
         }
+        */
     }
-
-    private int GetStock()
-    {
-        return itemData.buyMaxNum;
-    }
-
-    public ItemData GetItemData()
-    {
-        return itemData;
-    }
-
 }

@@ -16,4 +16,6 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 55187492ce9fa9f48b716dcc941ef924, type: 3}
   price: 20
   description: A celebration in every bite. Happy Birthday?
+  quantity: 0
+  buyMaxNum: 3
   saturation: 50

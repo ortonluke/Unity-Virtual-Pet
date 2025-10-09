@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Steak
   icon: {fileID: 0}
-  price: 15
+  price: 20
   description: Cooked to medium-rare
+  quantity: 0
+  buyMaxNum: 5
   saturation: 55

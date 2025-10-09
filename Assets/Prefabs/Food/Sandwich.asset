@@ -16,4 +16,6 @@ MonoBehaviour:
   icon: {fileID: 0}
   price: 12
   description: A simple stacked snack, perfect for any adventurer.
+  quantity: 0
+  buyMaxNum: 10
   saturation: 28

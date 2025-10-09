@@ -16,4 +16,6 @@ MonoBehaviour:
   icon: {fileID: 0}
   price: 15
   description: A delicious slice of pastry, sweet and satisfying.
+  quantity: 0
+  buyMaxNum: 5
   saturation: 45

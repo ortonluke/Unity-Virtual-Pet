@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3115612968332201375}
   - component: {fileID: 4808504866134791073}
   - component: {fileID: 4233918530342854247}
-  - component: {fileID: 7964282048466894527}
+  - component: {fileID: 8731340214068695362}
   m_Layer: 5
-  m_Name: ShopItem
+  m_Name: InventoryItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,10 +35,10 @@ RectTransform:
   - {fileID: 4033266957486889613}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 90, y: 90}
+  m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3115612968332201375
 CanvasRenderer:
@@ -122,8 +122,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7964282048466894527}
-        m_TargetAssemblyTypeName: ShopItemUI, Assembly-CSharp
+      - m_Target: {fileID: 8731340214068695362}
+        m_TargetAssemblyTypeName: InventoryItemUI, Assembly-CSharp
         m_MethodName: ButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -134,7 +134,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7964282048466894527
+--- !u!114 &8731340214068695362
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,14 +143,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2243846429438616302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfa82798d96e43f4bb1bde991add4389, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f8511fddaef2d74cba6ad0b0a11294e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priceText: {fileID: 478988907569205364}
+  quantityText: {fileID: 478988907569205364}
   render: {fileID: 4808504866134791073}
-  BuyPopupPrefab: {fileID: 1324039268874715411, guid: 65a8b2d7ced5fc0479435581d665a249, type: 3}
-  buyMenuYOffset: -100
-  stock: 0
+  quantity: 0
 --- !u!1 &2917566030243424765
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +161,7 @@ GameObject:
   - component: {fileID: 9212746880360146558}
   - component: {fileID: 478988907569205364}
   m_Layer: 5
-  m_Name: PriceText
+  m_Name: QuantityText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185,7 +183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: -70}
+  m_AnchoredPosition: {x: 24.5, y: -29.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9212746880360146558
@@ -216,7 +214,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1 Gold
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -250,7 +248,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -279,7 +277,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 98.52985, w: 0}
+  m_margin: {x: 100.92981, y: 0, z: 97.49469, w: -2.0704346}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

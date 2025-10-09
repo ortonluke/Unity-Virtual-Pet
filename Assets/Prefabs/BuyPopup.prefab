@@ -95,6 +95,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleText: {fileID: 5343043507361545761}
   descText: {fileID: 5652350899182849461}
+  numSelected: {fileID: 4361869485942249943}
+  slider: {fileID: 1320663286452342571}
 --- !u!1 &2208171196316998292
 GameObject:
   m_ObjectHideFlags: 0

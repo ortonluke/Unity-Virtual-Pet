@@ -16,4 +16,6 @@ MonoBehaviour:
   icon: {fileID: 0}
   price: 4
   description: It's just cheese, but what kind?
+  quantity: 0
+  buyMaxNum: 10
   saturation: 20

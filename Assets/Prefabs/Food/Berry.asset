@@ -17,4 +17,6 @@ MonoBehaviour:
   price: 1
   description: "Tiny, sweet, and suspiciously round. Don\u2019t ask where it came
     from."
+  quantity: 0
+  buyMaxNum: 15
   saturation: 8

@@ -16,4 +16,6 @@ MonoBehaviour:
   icon: {fileID: 0}
   price: 6
   description: Fresh from the nearest pond.
+  quantity: 0
+  buyMaxNum: 10
   saturation: 30
