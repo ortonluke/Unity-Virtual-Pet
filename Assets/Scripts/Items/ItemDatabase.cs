@@ -14,6 +14,9 @@ public class ItemDatabase : MonoBehaviour
 
     void Start()
     {
+        //THIS SHOULD ONLY RUN AT THE START OF THE GAME, NOT BETWEEN SCENES, DON'T KNOW IF THIS WILL BREAK!
+        ClearQuantities();
+
         MakeShopItems();
     }
 
@@ -37,5 +40,13 @@ public class ItemDatabase : MonoBehaviour
     public void AddToInventory(ItemData item)
     {
         inventoryItems.Add(item);
+    }
+
+    public void ClearQuantities()
+    {
+        foreach (ItemData item in allItems)
+        {
+            item.quantity = 0;
+        }
     }
 }

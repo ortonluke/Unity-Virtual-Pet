@@ -1391,7 +1391,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.25882354, b: 0.2588235, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1615,6 +1615,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7e4bf684ac297e345bb771bd50e0106c, type: 2}
   shopItems: []
   numberOfShopItems: 9
+  inventoryItems: []
 --- !u!1 &1288272989
 GameObject:
   m_ObjectHideFlags: 0
