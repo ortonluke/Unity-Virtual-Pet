@@ -19,10 +19,22 @@ public class BuyPopup : MonoBehaviour
 
     private ItemDatabase database;
 
+    private StatManager statM;
+
+    [SerializeField] private TextMeshProUGUI stat1Text;
+    private float stat1;
+
+    [SerializeField] private TextMeshProUGUI stat2Text;
+    private float stat2;
+
+    [SerializeField] private TextMeshProUGUI stat3Text;
+    private float stat3;
+
     // Start is called before the first frame update
     void Start()
     {
         itemData = shopItem.GetItemData();
+        statM = GameObject.Find("GameManager").GetComponent<StatManager>();
 
         titleText.text = itemData.name;
         descText.text = itemData.description;
@@ -31,12 +43,14 @@ public class BuyPopup : MonoBehaviour
         slider.maxValue = itemData.buyMaxNum;
 
         database = FindObjectOfType<ItemDatabase>();
+
+        SetStatistics();
     }
 
     // Update is called once per frame
     void Update()
     {
-        numSelected.text = slider.value.ToString();
+        numSelected.text = "Buy: " + slider.value.ToString() + ", Cost: " + (slider.value * itemData.price).ToString();
     }
 
     public void SetShopItem(ShopItemUI creator)
@@ -44,12 +58,38 @@ public class BuyPopup : MonoBehaviour
         shopItem = creator;
     }
 
+    private void SetStatistics()
+    {
+        if (itemData.typeName == "Food")
+        {
+            stat1Text.text = "Saturation: " + itemData.stat1; //Saturation
+        }
+    }
+
+
     public void Purchase()
     {
-        Debug.Log("Purchased: " + itemData.name);
-        //Get InventoryItemUI and add quantity there
-        itemData.quantity += (int) slider.value;
-        database.AddToInventory(itemData);
-        Destroy(gameObject);
+        if (slider.value > 0)
+        {
+            if (statM.money >= itemData.price * (int)slider.value)
+            {
+                //Purchase Accepted
+                itemData.quantity += (int)slider.value;
+                database.AddToInventory(itemData);
+                shopItem.createAlert("Purchased!", Color.green);
+                statM.updateMoney(itemData.price * -1 * (int)slider.value);
+                Destroy(gameObject);
+            }
+            else
+            {
+                //Purchase Denied
+                shopItem.createAlert("Insufficient Funds!", Color.red);
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

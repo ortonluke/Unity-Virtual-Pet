@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class ShopBuilder : MonoBehaviour
@@ -8,6 +10,8 @@ public class ShopBuilder : MonoBehaviour
 
     [SerializeField] private GameObject itemButtonPrefab; //Template for UI button
     [SerializeField] private Transform itemListParent; // Panel to set as parent
+
+    [SerializeField] private TextMeshProUGUI alertText;
 
     [SerializeField] private List<ItemData> shopItems = new List<ItemData>(); //list of only items shown in shop
 
@@ -57,6 +61,4 @@ public class ShopBuilder : MonoBehaviour
             }
         }
     }
-
-    
 }

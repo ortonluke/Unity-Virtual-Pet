@@ -12,8 +12,8 @@ public class InventoryBuilder : MonoBehaviour
 
     [SerializeField] private List<ItemData> inventoryItems = new List<ItemData>();
 
-    float[] xPositions = { 40, 104, 168, 232, 296, 360 };
-    float[] yPositions = { -104, -168, -232, -296 };
+    float[] xPositions = { 58.75f, 152.92f, 247.08f, 341.25f };
+    float[] yPositions = { -120f, -204f, -288f, -372f, -456f, -540f };
 
     // Start is called before the first frame update
     void Start()

@@ -13,5 +13,9 @@ public abstract class ItemData : ScriptableObject
     public int buyMaxNum;
 
     public abstract string typeName { get; }
+
+    public abstract float stat1 { get; }
+    public abstract float stat2 { get; }
+    public abstract float stat3 { get; }
 }
 

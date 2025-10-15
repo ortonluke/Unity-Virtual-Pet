@@ -12,6 +12,8 @@ public class ItemDatabase : MonoBehaviour
 
     public List<ItemData> inventoryItems;
 
+    public int inventoryCapacity = 24;
+
     void Start()
     {
         //THIS SHOULD ONLY RUN AT THE START OF THE GAME, NOT BETWEEN SCENES, DON'T KNOW IF THIS WILL BREAK!
@@ -39,6 +41,14 @@ public class ItemDatabase : MonoBehaviour
 
     public void AddToInventory(ItemData item)
     {
+        foreach (ItemData i in inventoryItems)
+        {
+            if (i.name == item.name)
+            {
+                return;
+            }
+        }
+
         inventoryItems.Add(item);
     }
 

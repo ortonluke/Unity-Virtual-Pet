@@ -6,25 +6,21 @@ using UnityEngine;
 public class Wallet : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI text;
-    [SerializeField] private int money;
-    [SerializeField] private int startMoney;
+    private int money;
+
+    private StatManager statM; 
 
     // Start is called before the first frame update
     void Start()
     {
-        money = startMoney;
-        text.text = ": " + money;
+        statM = GameObject.Find("GameManager").GetComponent<StatManager>();
+
+        money = statM.money;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void updateMoney(int x)
-    {
-        money += x;
-        text.text = ": " + money;    
+        text.text = ": " + statM.money;
     }
 }

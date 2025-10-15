@@ -9,6 +9,8 @@ public class StatManager: MonoBehaviour
     [SerializeField] private float moodDrainAmount = 0.1f;
     [SerializeField] private float energyDrainAmount = 0.1f;
 
+    [SerializeField] public int money = 10;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,5 +37,9 @@ public class StatManager: MonoBehaviour
             stats.updateEnergy(-energyDrainAmount);
             Debug.Log("Energy drained! Current energy: " + stats.getEnergy());
         }
+    }
+    public void updateMoney(int x)
+    {
+        money += x;
     }
 }

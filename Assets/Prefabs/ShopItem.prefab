@@ -151,6 +151,7 @@ MonoBehaviour:
   BuyPopupPrefab: {fileID: 1324039268874715411, guid: 65a8b2d7ced5fc0479435581d665a249, type: 3}
   buyMenuYOffset: -100
   stock: 0
+  alertText: {fileID: 9044743427818227726, guid: de4f9aa0073c53a47a6c844d973d1e5d, type: 3}
 --- !u!1 &2917566030243424765
 GameObject:
   m_ObjectHideFlags: 0

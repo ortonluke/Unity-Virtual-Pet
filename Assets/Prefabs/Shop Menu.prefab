@@ -313,3 +313,4 @@ MonoBehaviour:
   itemButtonPrefab: {fileID: 2243846429438616302, guid: b1000671c6989ca41b6447c88b7a3c55, type: 3}
   itemListParent: {fileID: 7665904224209629138}
   shopItems: []
+  alertText: {fileID: 9044743427818227726, guid: de4f9aa0073c53a47a6c844d973d1e5d, type: 3}
