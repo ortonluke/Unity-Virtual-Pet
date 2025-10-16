@@ -19,7 +19,7 @@ public class ItemDatabase : MonoBehaviour
         //THIS SHOULD ONLY RUN AT THE START OF THE GAME, NOT BETWEEN SCENES, DON'T KNOW IF THIS WILL BREAK!
         ClearQuantities();
 
-        MakeShopItems();
+        SetShopItems();
     }
 
     // Utility function: get items by type
@@ -28,15 +28,17 @@ public class ItemDatabase : MonoBehaviour
         return allItems.FindAll(item => item.typeName == type);
     }
 
-    public void MakeShopItems()
+    public void SetShopItems()
     {
-        //creates the first n number of shopItems. 
-        int count = Mathf.Min(numberOfShopItems, allItems.Count);
+        //Get foodItems
+        List<ItemData> foodItems = GetItemsByType("Food");
 
-        for (int i = 0; i < count; i++)
-        {
-            shopItems.Add(allItems[i]);
-        }
+        //shuffle the items
+        foodItems = foodItems.OrderBy(x => Random.value).ToList();
+
+        //creates the list of n number of shopItems. 
+        int count = Mathf.Min(numberOfShopItems, foodItems.Count);
+        shopItems = foodItems.GetRange(0, count);
     }
 
     public void AddToInventory(ItemData item)

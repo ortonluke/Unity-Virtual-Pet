@@ -26,18 +26,15 @@ public class ShopBuilder : MonoBehaviour
         PopulateShop();
     }
 
-    //Just for reference later on how to get items of type ____
-    private List<ItemData> GetFoodStock()
-    {
-        return database.GetItemsByType("Food");
-    }
-
     void PopulateShop()
     {
         shopItems.Clear();
 
         //GET ITEMS FOR THE SHOP
         shopItems = database.shopItems;
+        //shopItems = shopItems.OrderBy(x => UnityEngine.Random.value).ToList();
+
+
 
         //Create UI elements
         int index = 0;
