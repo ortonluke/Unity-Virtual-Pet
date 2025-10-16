@@ -42,4 +42,11 @@ public class StatManager: MonoBehaviour
     {
         money += x;
     }
+
+    public void ConsumeUpdate(float hunger = 0, float mood = 0, float energy = 0)
+    {
+        stats.updateHunger(hunger / 100);
+        stats.updateMood(mood / 100);
+        stats.updateEnergy(energy / 100);
+    }
 }

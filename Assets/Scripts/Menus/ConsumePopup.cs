@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ConsumePopup : MonoBehaviour
@@ -65,6 +66,27 @@ public class ConsumePopup : MonoBehaviour
 
     public void Use()
     {
+        //remove from quantity
+        itemData.quantity -= (int) slider.value;
+        invItem.UpdateQuantityText();
+
+        //change stats
+        for (int n = 0; n < slider.value; n++)
+        {
+            statM.ConsumeUpdate(itemData.stat1, itemData.stat2, itemData.stat3);
+        }
+
+        //if quantity = 0, then remove from the list as well
+        if (itemData.quantity == 0)
+        {
+            //Delete Item in inventory
+            database.RemoveFromInventory(itemData); //remove from the list
+            //Destroy(invItem.gameObject); //remove inventory gameobject from screen
+            Destroy(transform.parent.gameObject);
+        }
+
+        //close window
+        Destroy(gameObject);
 
     }
 

@@ -52,6 +52,18 @@ public class ItemDatabase : MonoBehaviour
         inventoryItems.Add(item);
     }
 
+    public void RemoveFromInventory(ItemData item)
+    {
+        for (int i = 0; i < inventoryItems.Count; i++)
+        {
+            if (inventoryItems[i].name == item.name)
+            {
+                inventoryItems.RemoveAt(i);
+                return;
+            }
+        }
+    }
+
     public void ClearQuantities()
     {
         foreach (ItemData item in allItems)

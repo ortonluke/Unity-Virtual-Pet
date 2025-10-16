@@ -24,8 +24,14 @@ public class InventoryItemUI : MonoBehaviour
             render.sprite = data.icon;
         }
 
+        UpdateQuantityText();
+    }
+
+    public void UpdateQuantityText()
+    {
         quantityText.text = itemData.quantity.ToString();
     }
+
     public ItemData GetItemData()
     {
         return itemData;

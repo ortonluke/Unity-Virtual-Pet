@@ -28,7 +28,7 @@ public class InventoryBuilder : MonoBehaviour
         
     }
 
-    private void PopulateInventory()
+    public void PopulateInventory()
     {
         inventoryItems.Clear();
 
