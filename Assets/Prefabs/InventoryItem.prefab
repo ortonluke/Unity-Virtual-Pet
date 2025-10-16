@@ -148,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quantityText: {fileID: 478988907569205364}
   render: {fileID: 4808504866134791073}
+  invPopup: {fileID: 1324039268874715411, guid: 9236774083860ae4e985faa54adbbf90, type: 3}
 --- !u!1 &2917566030243424765
 GameObject:
   m_ObjectHideFlags: 0

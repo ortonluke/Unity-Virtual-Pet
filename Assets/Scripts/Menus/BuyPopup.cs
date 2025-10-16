@@ -22,13 +22,8 @@ public class BuyPopup : MonoBehaviour
     private StatManager statM;
 
     [SerializeField] private TextMeshProUGUI stat1Text;
-    private float stat1;
-
     [SerializeField] private TextMeshProUGUI stat2Text;
-    private float stat2;
-
     [SerializeField] private TextMeshProUGUI stat3Text;
-    private float stat3;
 
     // Start is called before the first frame update
     void Start()
@@ -62,7 +57,14 @@ public class BuyPopup : MonoBehaviour
     {
         if (itemData.typeName == "Food")
         {
-            stat1Text.text = "Saturation: " + itemData.stat1; //Saturation
+            stat1Text.text = "Hunger: " + (itemData.stat1 > 0 ? "+" : "") + itemData.stat1;
+            stat1Text.color = new Color32(255, 174, 66, 255);
+
+            stat2Text.text = "Mood: " + (itemData.stat2 > 0 ? "+" : "") + itemData.stat2;
+            stat2Text.color = new Color32(129, 250, 124, 255);
+
+            stat3Text.text = "Energy: " + (itemData.stat3 > 0 ? "+" : "") + itemData.stat3;
+            stat3Text.color = new Color32(76, 243, 255, 255);
         }
     }
 

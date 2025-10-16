@@ -6,10 +6,12 @@ using UnityEngine;
 public class FoodItemData : ItemData
 {
     public int saturation;
+    public int mood;
+    public int energy;
 
     public override string typeName => "Food";
 
-    public override float stat1 => saturation;
-    public override float stat2 => 0;
-    public override float stat3 => 0;
+    public override float stat1 => saturation; //Hunger
+    public override float stat2 => mood;
+    public override float stat3 => energy;
 }

@@ -11,6 +11,8 @@ public class InventoryItemUI : MonoBehaviour
 
     private ItemData itemData;
 
+    [SerializeField] private GameObject invPopup;
+
 
     //Popup Prefab for selecting it
 
@@ -24,18 +26,18 @@ public class InventoryItemUI : MonoBehaviour
 
         quantityText.text = itemData.quantity.ToString();
     }
+    public ItemData GetItemData()
+    {
+        return itemData;
+    }
+    private int GetStock()
+    {
+        return itemData.buyMaxNum;
+    }
 
     public void ButtonPressed()
     {
-        Debug.Log("Inventory (" + itemData.name + ") pressed!");
-        /*
-        //Make popup menu show up
-        if (buyMenu == null)
-        {
-            buyMenu = Instantiate(BuyPopupPrefab, transform.parent.parent);
-            buyMenu.GetComponent<BuyPopup>().SetShopItem(this);
-            buyMenu.transform.localPosition = new Vector3(0, buyMenuYOffset, 0);
-        }
-        */
+        GameObject menu = Instantiate(invPopup, transform.parent);
+        menu.GetComponent<ConsumePopup>().SetShopItem(this);
     }
 }
