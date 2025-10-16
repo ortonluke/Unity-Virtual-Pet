@@ -82,11 +82,11 @@ public class ConsumePopup : MonoBehaviour
             //Delete Item in inventory
             database.RemoveFromInventory(itemData); //remove from the list
             //Destroy(invItem.gameObject); //remove inventory gameobject from screen
-            Destroy(transform.parent.gameObject);
+            //Destroy(transform.parent.gameObject);
         }
 
         //close window
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
 
     }
 

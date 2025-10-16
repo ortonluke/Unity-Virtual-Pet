@@ -714,8 +714,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1866284463}
-  money: 0
-  startMoney: 10
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1616,6 +1614,7 @@ MonoBehaviour:
   shopItems: []
   numberOfShopItems: 9
   inventoryItems: []
+  inventoryCapacity: 24
 --- !u!1 &1288272989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2337,6 +2336,7 @@ MonoBehaviour:
   hungerDrainAmount: 0.1
   moodDrainAmount: 0.1
   energyDrainAmount: 0.1
+  money: 100
 --- !u!4 &1851336295
 Transform:
   m_ObjectHideFlags: 0

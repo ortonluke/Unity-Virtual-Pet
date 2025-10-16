@@ -23,19 +23,16 @@ public class StatManager: MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             stats.updateHunger(-hungerDrainAmount);
-            Debug.Log("Hunger drained! Current hunger: " + stats.getHunger());
         }
 
         if (Input.GetKeyDown(KeyCode.M))
         {
             stats.updateMood(-moodDrainAmount);
-            Debug.Log("Mood drained! Current mood: " + stats.getMood());
         }
 
         if (Input.GetKeyDown(KeyCode.N))
         {
             stats.updateEnergy(-energyDrainAmount);
-            Debug.Log("Energy drained! Current energy: " + stats.getEnergy());
         }
     }
     public void updateMoney(int x)

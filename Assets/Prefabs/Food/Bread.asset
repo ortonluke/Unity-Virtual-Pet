@@ -19,3 +19,5 @@ MonoBehaviour:
   quantity: 0
   buyMaxNum: 10
   saturation: 25
+  mood: 2
+  energy: 5
