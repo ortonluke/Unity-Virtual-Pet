@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class MoodBar : MonoBehaviour
+public class HungerBar : MonoBehaviour
 {
-    [SerializeField] private StatTracker stats;
+    [SerializeField] private StatManager stats;
     [SerializeField] private RectTransform fillRect;
 
     [SerializeField] private float fillSpeed;
@@ -15,15 +16,17 @@ public class MoodBar : MonoBehaviour
 
     private void Start()
     {
+        stats = FindObjectOfType<StatManager>();
+
         initialWidth = fillRect.sizeDelta.x;
         fillRect.pivot = new Vector2(0f, 0.5f);
         fillRect.anchoredPosition = new Vector2(leftPadding, 0f);
-    }
+    }   
 
     void Update()
     {
         // Calculate target width based on hunger
-        float targetWidth = stats.getMood() * initialWidth;
+        float targetWidth = stats.hunger * initialWidth;
 
         // Smoothly slide width
         float newWidth = Mathf.Lerp(fillRect.sizeDelta.x, targetWidth, Time.deltaTime * fillSpeed);

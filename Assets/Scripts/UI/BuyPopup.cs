@@ -79,7 +79,9 @@ public class BuyPopup : MonoBehaviour
                 itemData.quantity += (int)slider.value;
                 database.AddToInventory(itemData);
                 shopItem.createAlert("Purchased!", Color.green);
+
                 statM.updateMoney(itemData.price * -1 * (int)slider.value);
+
                 Destroy(gameObject);
             }
             else

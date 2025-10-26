@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5bae3cdaf4456d4db3cb8e6700c12aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 1808927848}
+  stats: {fileID: 0}
   fillRect: {fileID: 163178178}
   fillSpeed: 5
   leftPadding: 15
@@ -581,7 +581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d60ce6956438a4468449a3d44f9510f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 1808927848}
+  stats: {fileID: 0}
   fillRect: {fileID: 185012626}
   fillSpeed: 5
   leftPadding: 15
@@ -1776,7 +1776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde018151132e8d4482396d05e00b652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 1808927848}
+  stats: {fileID: 0}
   fillRect: {fileID: 1401876168}
   fillSpeed: 5
   leftPadding: 15
@@ -2132,7 +2132,6 @@ GameObject:
   - component: {fileID: 1808927845}
   - component: {fileID: 1808927846}
   - component: {fileID: 1808927847}
-  - component: {fileID: 1808927848}
   m_Layer: 0
   m_Name: Pet
   m_TagString: Untagged
@@ -2287,22 +2286,6 @@ MonoBehaviour:
   maxMoveTime: 3
   pauseTime: 1
   moveSpeed: 2
---- !u!114 &1808927848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1808927841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e25d42817d95c4b46b70792548076a78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hunger: 1
-  mood: 1
-  energy: 1
-  food: 10
 --- !u!1 &1851336293
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,7 +2315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b444a7d8e079714592c285d89accae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 1808927848}
+  stats: {fileID: 0}
   hungerDrainAmount: 0.1
   moodDrainAmount: 0.1
   energyDrainAmount: 0.1
