@@ -34,7 +34,7 @@ public class BuyPopup : MonoBehaviour
         titleText.text = itemData.name;
         descText.text = itemData.description;
 
-        slider.minValue = 0;
+        slider.minValue = 1;
         slider.maxValue = itemData.buyMaxNum;
 
         database = FindObjectOfType<ItemDatabase>();

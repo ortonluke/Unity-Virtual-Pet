@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Profiling;
 using static PlayerProfile;
 
 public class ProfileManager : MonoBehaviour
@@ -11,7 +12,7 @@ public class ProfileManager : MonoBehaviour
     //autosave behaviour:
     public bool autoSaveOnQuit = true;
 
-
+    [SerializeField]
     private ItemDatabase database;
     void Awake()
     {
@@ -28,14 +29,21 @@ public class ProfileManager : MonoBehaviour
 
     private void Start()
     {
-        database = FindAnyObjectByType<ItemDatabase>();
-        Debug.Log(Application.persistentDataPath);
+        
     }
 
     public void LoadAndApplyProfile()
     {
+        //Load Profile
         CurrentProfile = SaveSystem.LoadProfile();
+
+        //Apply to Runtime
         ApplyProfileToRuntime();
+
+        //Load Inventory
+        LoadInventoryFromProfile(CurrentProfile);
+
+        
     }
 
     // Copy saved profile values into StatManager (the runtime component)
@@ -82,7 +90,7 @@ public class ProfileManager : MonoBehaviour
             UpdateProfileFromRuntimeAndSave();
     }
 
-    public List<ItemSave> SerializeInventory(List<ItemData> runtimeInventory)
+    private List<ItemSave> SerializeInventory(List<ItemData> runtimeInventory)
     {
         List<ItemSave> saved = new List<ItemSave>();
 
@@ -97,5 +105,24 @@ public class ProfileManager : MonoBehaviour
         }
 
         return saved;
+    }
+    public void LoadInventoryFromProfile(PlayerProfile profile)
+    {
+        // Clear any previous runtime inventory
+        database.inventoryItems.Clear();
+
+        foreach (var itemSave in profile.inventory)
+        {
+            ItemData baseItem = database.GetItemByName(itemSave.itemID);
+            if (baseItem != null)
+            {
+                // Create a runtime copy (clone) so the original asset stays intact
+                ItemData runtimeItem = ScriptableObject.Instantiate(baseItem);
+                runtimeItem.quantity = itemSave.quantity;
+                database.inventoryItems.Add(runtimeItem);
+
+                Debug.Log($"Loaded {runtimeItem.itemName} with quantity {runtimeItem.quantity}");
+            }
+        }
     }
 }

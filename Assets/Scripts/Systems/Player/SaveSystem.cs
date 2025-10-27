@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using static PlayerProfile;
+using UnityEngine.Profiling;
 
 public class SaveSystem : MonoBehaviour
 {
@@ -40,6 +42,5 @@ public class SaveSystem : MonoBehaviour
             return new PlayerProfile();
         }
     }
-
     public static bool SaveExists() => File.Exists(SavePath);
 }

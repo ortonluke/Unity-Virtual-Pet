@@ -28,6 +28,11 @@ public class ItemDatabase : MonoBehaviour
         return allItems.FindAll(item => item.typeName == type);
     }
 
+    public ItemData GetItemByName(string name)
+    {
+        return allItems.Find(item => item.itemName == name);
+    }
+
     public void SetShopItems()
     {
         //Get foodItems
