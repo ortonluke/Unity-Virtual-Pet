@@ -16,8 +16,7 @@ public class ItemDatabase : MonoBehaviour
 
     void Start()
     {
-        //THIS SHOULD ONLY RUN AT THE START OF THE GAME, NOT BETWEEN SCENES, DON'T KNOW IF THIS WILL BREAK!
-        ClearQuantities();
+        //ClearQuantities();
 
         SetShopItems();
     }
@@ -50,7 +49,7 @@ public class ItemDatabase : MonoBehaviour
     {
         foreach (ItemData i in inventoryItems)
         {
-            if (i.name == item.name)
+            if (i.itemName == item.itemName)
             {
                 return;
             }

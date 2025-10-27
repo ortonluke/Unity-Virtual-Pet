@@ -108,20 +108,17 @@ public class ProfileManager : MonoBehaviour
     }
     public void LoadInventoryFromProfile(PlayerProfile profile)
     {
-        // Clear any previous runtime inventory
         database.inventoryItems.Clear();
 
         foreach (var itemSave in profile.inventory)
         {
-            ItemData baseItem = database.GetItemByName(itemSave.itemID);
-            if (baseItem != null)
+            ItemData item = database.GetItemByName(itemSave.itemID);
+            if (item != null)
             {
-                // Create a runtime copy (clone) so the original asset stays intact
-                ItemData runtimeItem = ScriptableObject.Instantiate(baseItem);
-                runtimeItem.quantity = itemSave.quantity;
-                database.inventoryItems.Add(runtimeItem);
+                item.quantity = itemSave.quantity; // directly overwrite the quantity
+                database.inventoryItems.Add(item);
 
-                Debug.Log($"Loaded {runtimeItem.itemName} with quantity {runtimeItem.quantity}");
+                Debug.Log($"Loaded {item.itemName} with quantity {item.quantity}");
             }
         }
     }
