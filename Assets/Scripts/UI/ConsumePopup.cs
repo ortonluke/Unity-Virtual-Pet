@@ -38,7 +38,7 @@ public class ConsumePopup : MonoBehaviour
         titleText.text = itemData.name;
         descText.text = itemData.description;
 
-        slider.minValue = 0;
+        slider.minValue = 1;
         slider.maxValue = itemData.quantity;
 
         database = FindObjectOfType<ItemDatabase>();
